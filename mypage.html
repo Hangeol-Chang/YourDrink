@@ -9,33 +9,42 @@
 </head>
 <body>
     <div class="container" style="float: none; margin:100 auto; width: 600px;"> 
-        <div class="col-md-3" style="float: none; margin:0 auto;">
-            {이름} 의 페이지
+        <div class="col text-center" style="float: none; margin:0 auto;">
+            <h1 class="h3 fw-bold">{이름}의 페이지</h1>
         </div>
 
-        <div class="row">
-            <div class="col">
-                방번호 : &nbsp;
+        <div class="row d-flex align-items-center">
+            <!-- <div class="col-2 text-center">
+                게임<br>참가하기
+            </div> -->
+            <div class="col-10">
+                <div class="row d-flex align-items-center">
+                    <div class="col-3">
+                        방번호 : &nbsp;
+                    </div>
+                    <div class="col" style="padding:0px">
+                        <input type="text" style="width:100%;">
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center" style="background-color: aqua;">
+                    <div class="col-3">
+                        주종 : &nbsp;
+                    </div>
+                    <select class="form-select col" aria-label="Default select example">
+                        <option selected>주종을 선택해주세요.</option>
+                        <option value="1">소주</option>
+                        <option value="2">맥주</option>
+                        <option value="3">막걸리</option>
+                        <option value="4">와인</option>
+                        <option value="5">보드카</option>
+                        <option value="6">위스키</option>
+                    </select>
+                </div>
             </div>
-            <div class="col">
-                <input type="text">
-            </div>
+
+            <button type="button" class="btn btn-dark col-2" style="height: 65px;">Join!</button>
         </div>
-        <div class="row" style="background-color: aqua;">
-            <div class="col">
-                주종 : &nbsp;
-            </div>
-            <select class="form-select col" aria-label="Default select example">
-                <option selected>주종을 선택해주세요.</option>
-                <option value="1">소주</option>
-                <option value="2">맥주</option>
-                <option value="3">막걸리</option>
-                <option value="4">와인</option>
-                <option value="5">보드카</option>
-                <option value="6">위스키</option>
-            </select>
-            <button type="button" class="btn btn-dark col">Dark</button>
-        </div>
+
         <canvas id="myChart" style="max-width: 500px;"></canvas>
 
         <div class="col-md-5">

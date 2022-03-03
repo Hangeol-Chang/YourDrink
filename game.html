@@ -168,7 +168,7 @@
         var btns = document.querySelectorAll(".btt");
         btns.forEach(btn => {
             btn.addEventListener("click", btn => {
-                if(btn.target.innerHTML == 13 || btn.target.innerHTML != eval(prob.innerHTML)) { heartcut(); }
+                if(btn.target.innerHTML != 13 && btn.target.innerHTML != eval(prob.innerHTML)) { heartcut(); }
                 else {nextprob()};               
             })
         })

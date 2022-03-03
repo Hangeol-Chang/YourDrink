@@ -106,14 +106,14 @@
             <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="exampleModalLabel">취했군요~~</h5>
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">와우~ 아직 멀쩡하군요^^</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    당신은 술찌입니다~~
+                    간에게 죄송하지 않나요???
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-primary"><a href="./main.html" class="text-light text-decoration-none">난 술찌야ㅜㅜ</a></button>
+                <button type="button" class="btn btn-primary"><a href="./main.html" class="text-light text-decoration-none">`~(>_<。)\</a></button>
                 </div>
             </div>
             </div>
@@ -161,16 +161,6 @@
                         clearInterval(timing);
                         document.getElementById("countdown").innerHTML = "It's over";
                         heartcut();
-
-                        let probnum = document.getElementById("probnum").childNodes;
-                        probnum[1].innerHTML = Number(probnum[1].innerHTML) + 1;
-                        if(probnum[1].innerHTML >= 4) { myModal2.show(); }
-                        let i = 0;
-                        prob.innerHTML = "48 / 2 * (9 + 3)";
-                        btns.forEach(btn => {
-                            btn.firstChild.data = eval(prob.innerHTML) -7 + i*7;
-                            i++;
-                        })
                     }
             }, 1000);
         }
@@ -178,9 +168,8 @@
         var btns = document.querySelectorAll(".btt");
         btns.forEach(btn => {
             btn.addEventListener("click", btn => {
-                if(btn.target.innerHTML != eval(prob.innerHTML)) { heartcut(); }
-                else {nextprob()};
-                settimer();                
+                if(btn.target.innerHTML == 13 || btn.target.innerHTML != eval(prob.innerHTML)) { heartcut(); }
+                else {nextprob()};               
             })
         })
 
@@ -188,17 +177,27 @@
             let probnum = document.getElementById("probnum").childNodes;
             let prob = document.getElementById("prob");
             clearInterval(timing);
+            settimer();
 
             probnum[1].innerHTML = Number(probnum[1].innerHTML) + 1;
             if(probnum[1].innerHTML >= 4) {
+                clearInterval(timing);
                 myModal2.show();
             }
             let i = 0;
-            prob.innerHTML = "48 / 2 * (9 + 3)";
-            btns.forEach(btn => {
-                btn.firstChild.data = eval(prob.innerHTML) -7 + i*7;
-                i++;
-            })
+            if(probnum[1].innerHTML == 2){
+                prob.innerHTML = "48 / 2 * (9 + 3)";
+                btns.forEach(btn => {
+                    btn.firstChild.data = eval(prob.innerHTML) -7 + i*7;
+                    i++;
+                })
+            }else{
+                prob.innerHTML = "int a = 13;<br>System.out.println(a++);";
+                btns.forEach(btn => {
+                    btn.firstChild.data = 12 + i;
+                    i++;
+                })
+            }
         }
 
         function heartcut(){
@@ -209,7 +208,7 @@
             let check = document.getElementById("heart_active");
             // 모달 보여주기.
             if(check === null){ myModal.show(); }
-            else(nextprob)
+            else(nextprob())
         }
     </script>
 

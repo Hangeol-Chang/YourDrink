@@ -9,29 +9,32 @@
     <link rel="stylesheet" href="./css/publicstyle.css">
     <style>
         .itembox{
-            background-color:rgb(230,230,230);
+            background-color:rgb(240,240,240);
         }
         .h4{
             margin:10px;
+        }
+        .selector{
+            background-color: rgb(140,220,120);
+            margin : 5px 0 5px 0;
+            color:white;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
     <div class="col text-center" style="float: none; margin:0 auto;">
         <h1 class="title">
-            <img src="./image/beer.png" width="50px">
+            <img src="./image/beer.png" width="50px" style="color:rgb(12, 128, 114);">
             또 술드시러 오셨나요???
-            <img src="./image/beer.png" width="50px">
+            <img src="./image/beer.png" width="50px" style="color:rgb(12, 128, 114);">
         </h1>
     </div>
     <div class="container" style="float: none; margin:100 auto; width: 500px;"> 
 
         <div class="row d-flex align-items-center">
-            <!-- <div class="col-2 text-center">
-                게임<br>참가하기
-            </div> -->
             <div class="col-10">
-                <div class="row d-flex align-items-center">
+                <div class="row d-flex align-items-center selector">
                     <div class="col-3">
                         방번호 : &nbsp;
                     </div>
@@ -39,7 +42,7 @@
                         <input type="text" style="width:100%;">
                     </div>
                 </div>
-                <div class="row d-flex align-items-center" style="background-color: aqua;">
+                <div class="row d-flex align-items-center selector">
                     <div class="col-3">
                         주종 : &nbsp;
                     </div>
@@ -55,14 +58,15 @@
                 </div>
             </div>
 
-            <button type="button" class="btn btn-dark col-2" style="height: 65px;">Join!</button>
+            <!-- 버튼 -->
+            <button type="button" class="btn btn-dark col-2" style="height: 75px;">Join!</button>
         </div>
 
         <div class="container"> 
             <div class="row my-3"> 
                 <hr>
                 <div class="col-12"> 
-                    <h4>나의 전적</h4> 
+                    <h4 class="h4 fw-bold">나의 전적</h4> 
                 </div> 
             </div> 
             <div class="row my-2"> 

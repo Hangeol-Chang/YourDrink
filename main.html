@@ -23,21 +23,27 @@
           <span class="h1 fw-bold">현재 상황: <span id="result">0</span>잔</span>
         </span>
   
-        <ul class="d-flex-col">
-          <li class="nav-item">평균: n잔</li>
-          <li class="nav-item">최대 m잔</li>
-          <li class="nav-item">최소 x잔</li>
-        </ul>
+        <div class="d-flex-row col-4 h5 fw-bold">
+          <!-- <div class="nav-item">평균 : n 잔</div>
+          <div class="nav-item">최대 : m 잔</div>
+          <div class="nav-item">최소 : x 잔</div> -->
+
+          <span class="nav-item">평균 : n잔</span>
+          <span class="nav-item">최대 : m잔</span>
+          <span class="nav-item">최소 : x잔</span>
+        </div>
 
         <section class="text container">
             <div class="row cnt-game">
                 
-                           
-                <p> 평균: n잔 최대 m잔 최소 x잔</p>
                 <hr>
                 <p>
                     <button type="button" onclick="count()" class="btn btn-primary btn-lg">+1 잔</button>
-                    <button type="button" class="btn btn-dark btn-lg">게임 시작</button>
+                    <button type="button" class="btn btn-dark btn-lg">
+                      <a href="game.html" class="text-decoration-none text-light">
+                        게임 시작
+                      </a>
+                    </button>
                 </p>
             </div>
         </section>
